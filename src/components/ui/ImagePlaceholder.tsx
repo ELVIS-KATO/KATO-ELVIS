@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 
 interface ImagePlaceholderProps {
   children: ReactNode
@@ -13,6 +13,9 @@ export function ImagePlaceholder({
   className = '',
   minHeight = 'min-h-[200px]',
 }: ImagePlaceholderProps) {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [hasError, setHasError] = useState(false)
+
   const getImageUrl = (path: string) => {
     if (path.startsWith('http')) return path
     const base = import.meta.env.BASE_URL || '/'
@@ -26,19 +29,23 @@ export function ImagePlaceholder({
       role="img"
       aria-label={typeof children === 'string' ? children : 'Project Image'}
     >
-      {dataImage ? (
+      {dataImage && !hasError ? (
         <img
           src={getImageUrl(dataImage)}
           alt={typeof children === 'string' ? children : 'Project Image'}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 hover:scale-105 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={() => setIsLoaded(true)}
+          onError={() => setHasError(true)}
         />
       ) : null}
-      <div className="relative z-10 max-w-[80%] px-4 leading-relaxed bg-black/40 backdrop-blur-sm rounded-md py-2">
-        {children}
-      </div>
+
+      {(!isLoaded || hasError || !dataImage) && (
+        <div className="relative z-10 max-w-[80%] px-4 leading-relaxed bg-black/40 backdrop-blur-sm rounded-md py-2">
+          {children}
+        </div>
+      )}
     </div>
   )
 }

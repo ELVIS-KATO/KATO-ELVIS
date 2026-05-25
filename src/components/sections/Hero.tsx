@@ -53,13 +53,12 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="pointer-events-auto hidden lg:block"
         >
-          {/* REPLACE: swap placeholder with <img src="/profile-photo.jpg" alt="Kato Elvis" /> */}
           <ImagePlaceholder
-            dataImage="profile-photo.jpg"
+            dataImage="DP2.jpg"
             className="aspect-square max-w-md mx-auto"
             minHeight="min-h-[320px]"
           >
-            <img src="./DP2.jpg" alt="Kato Elvis" />
+            Profile Photo
           </ImagePlaceholder>
         </motion.div>
       </div>

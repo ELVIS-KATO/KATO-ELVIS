@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // GitHub Pages: change base to match your repo name (e.g. '/ELVIS-KATO/' or '/Deepseak/')
-const GITHUB_PAGES_BASE = '/ELVIS-KATO/'
+const GITHUB_PAGES_BASE = '/KATO-ELVIS/'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],

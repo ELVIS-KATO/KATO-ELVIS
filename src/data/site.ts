@@ -14,11 +14,11 @@ export const SITE = {
 } as const
 
 export const OPEN_SOURCE_COMMUNITIES = [
-  'OpenMRS (2 yrs)',
-  'Mifos (1 yr)',
-  'Open Elements (1 yr)',
-  'Sugar Labs (1 yr)',
-  'Linux Foundation',
+  { name: 'OpenMRS', startYear: 2024 },
+  { name: 'Mifos', startYear: 2025 },
+  { name: 'Open Elements', startYear: 2025 },
+  { name: 'Sugar Labs', startYear: 2025 },
+  { name: 'Linux Foundation', startYear: 2025 },
 ] as const
 
 export const SKILLS = {
@@ -58,7 +58,7 @@ export const PROJECTS = [
     tech: ['Java', 'Bootstrap', 'MySQL', 'CSS','JavaFX'],
     github: 'https://github.com/ELVIS-KATO/SCHOOL-MANAGEMENT', 
     placeholderText: 'Rakai school image',
-    imageData: 'rakai-screenshot.png',
+    imageData: 'Rakai-screenshot.png',
   },
 ] as const
 

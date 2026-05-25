@@ -10,7 +10,7 @@ Live stack: dark neon theme, 3D hero scene, live GitHub stats, markdown blog, do
 
 ```bash
 npm install
-npm run setup:resume   # creates placeholder PDF if missing
+npm run setup:resume   # I ran it incase i did not have the pdf resume
 npm run dev
 ```
 
@@ -25,7 +25,7 @@ npm run preview
 
 ---
 
-## Project Structure
+## My Project Structure
 
 ```
 src/
@@ -40,7 +40,7 @@ src/
 ├── pages/            # Home, Blog list, Blog post
 └── utils/blog.ts     # Blog loader (browser-safe frontmatter parser)
 public/
-└── resume-kato-elvis.pdf   # REPLACE with your real resume
+└── resume-kato-elvis.pdf   
 ```
 
 ---
@@ -49,15 +49,14 @@ public/
 
 ### Personal info & links
 
-Edit **`src/data/site.ts`**:
-
+**`src/data/site.ts`**: 
 - Email, phone, GitHub username, LinkedIn URL
 - Bio, title, university
 - Resume path
 
 ### Projects
 
-Edit **`PROJECTS`** in `src/data/site.ts`:
+ **`PROJECTS`** in `src/data/site.ts`:
 
 - Titles, descriptions, tech stack
 - Set `github` to real repository URLs (currently `#`)
@@ -65,16 +64,16 @@ Edit **`PROJECTS`** in `src/data/site.ts`:
 
 ### Skills
 
-Edit **`SKILLS`** in `src/data/site.ts` — adjust names and `level` (0–100) for progress bars.
+ **`SKILLS`** in `src/data/site.ts`  names and `level` (0–100) for progress bars.
 
 ### Blog posts
 
-1. Add a `.md` file under **`src/content/blog/`**
-2. Include frontmatter:
+1. Added a `.md` file under **`src/content/blog/`**
+2. Includes frontmatter:
 
 ```md
 ---
-title: Your Post Title
+title: The Post Title
 date: 2026-01-15
 excerpt: Short summary for cards and SEO.
 tags:
@@ -82,14 +81,14 @@ tags:
   - tag-two
 ---
 
-Your markdown content here…
+Your markdown content is put here…
 ```
 
 3. Slug = filename without `.md` (e.g. `my-new-post.md` → `/blog/my-new-post`)
 
 ### Resume PDF
 
-**REPLACE `/public/resume-kato-elvis.pdf` with your actual PDF.**
+`/public/resume-kato-elvis.pdf` with your actual PDF.**
 
 ```bash
 # copy your file over the placeholder
@@ -109,21 +108,13 @@ All placeholders use the `.image-placeholder` class with a diagonal pattern and 
 
 ### GitHub Pages base URL
 
-In **`vite.config.ts`**, change:
+In **`vite.config.ts`**, I have to change:
 
 ```ts
-const GITHUB_PAGES_BASE = '/ELVIS-KATO/'  // must match repo name
+const GITHUB_PAGES_BASE = '/KATO-ELVIS/'  
 ```
 
-Examples:
-
-- Repo `ELVIS-KATO` → `'/ELVIS-KATO/'`
-- Repo `Deepseak` → `'/Deepseak/'`
-- User site `username.github.io` → `'/'`
-
----
-
-## Deploy to GitHub Pages
+## Deploying to GitHub Pages
 
 1. Push the project to GitHub (e.g. `ELVIS-KATO/ELVIS-KATO` or your chosen repo name).
 2. Set `GITHUB_PAGES_BASE` in `vite.config.ts` to `/'<repo-name>'/`.
@@ -149,7 +140,7 @@ npm run build
 
 ---
 
-## Features Checklist
+## Features Of my Project Checklist
 
 - [x] React + TypeScript + Vite + Tailwind v4
 - [x] Framer Motion section animations
@@ -165,7 +156,7 @@ npm run build
 
 ---
 
-## Scripts
+## Scripts I use
 
 | Command | Description |
 |---------|-------------|

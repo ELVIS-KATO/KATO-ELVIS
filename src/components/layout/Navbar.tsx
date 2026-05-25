@@ -50,15 +50,6 @@ export function Navbar() {
                   {link.label}
                 </Link>
               </li>
-            ) : link.href === '/' ? (
-              <li key={link.href}>
-                <Link
-                  to="/"
-                  className="text-sm text-[#a0a0b8] transition-colors hover:text-[#00F0FF]"
-                >
-                  {link.label}
-                </Link>
-              </li>
             ) : (
               <li key={link.href}>
                 <button
@@ -110,7 +101,7 @@ export function Navbar() {
           >
             <ul className="flex flex-col gap-4 px-4 py-6">
               {NAV_LINKS.map((link) =>
-                link.href === '/blog' || link.href === '/' ? (
+                link.href === '/blog' ? (
                   <li key={link.href}>
                     <Link
                       to={link.href}

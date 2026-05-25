@@ -10,7 +10,7 @@ export const SITE = {
   linkedin: '#', //To be added
   university: 'Bugema University',
   year: '2nd Year',
-  resumePath: 'public/Kato_Elvis_Resume.pdf', //Resume Doc here...
+  resumePath: 'Kato_Elvis_Resume.pdf', //Resume Doc here...
 } as const
 
 export const OPEN_SOURCE_COMMUNITIES = [
